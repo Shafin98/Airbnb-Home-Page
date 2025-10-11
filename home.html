@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airbnb Home Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleLove(btn) {
+    const img = btn.querySelector(".love-icon");
+    if (img.src.includes("heart-outline.png")) {
+        img.src = "/pics/logo/heart-filled.png"; 
+    } else {
+        img.src = "/pics/logo/heart-outline.png"; 
+    }
+    }
+    </script>
+
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-6 py-4">
+    <!-- Left Logo -->
+    <div class="flex items-center space-x-2">
+        <img src="/pics/logo/airbnb.png" class="w-8 h-8">
+        <span class="text-xl font-bold text-red-500">airbnb</span>
+    </div>
+
+    <!-- Center Nav Links -->
+    <div class="hidden md:flex space-x-8 font-medium text-gray-700">
+        <!-- Homes -->
+        <a href="#" class="flex items-center space-x-2 group transition-transform duration-200 hover:scale-105">
+        <img src="/pics/logo/Home.png" alt="homes" class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition">
+        <span class="group-hover:text-pink-600">Homes</span>
+        </a>
+
+        <!-- Experiences -->
+        <a href="#" class="flex items-center space-x-2 group transition-transform duration-200 hover:scale-105">
+        <img src="/pics/logo/exp.png" alt="homes" class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition">
+        <span class="group-hover:text-pink-600">Experiences</span>
+        </a>
+
+        <!-- Services -->
+        <a href="#" class="flex items-center space-x-2 group transition-transform duration-200 hover:scale-105">
+        <img src="/pics/logo/service.png" alt="homes" class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition">
+        <span class="group-hover:text-pink-600">Services</span>
+        </a>
+    </div>
+
+    <!-- Right Section -->
+    <div class="flex items-center space-x-4">
+    <!-- Become a host button -->
+    <button class="px-4 py-2 border rounded-full text-sm hover:bg-gray-200 transition">Become a host</button>
+
+    <!-- Globe Icon Button -->
+    <button class="p-2 rounded-full hover:bg-gray-200 transition">
+        <img src="/pics/logo/global.png" alt="Language" class="w-5 h-5">
+    </button>
+
+    <!-- Menu Icon Button -->
+    <button class="p-2 rounded-full hover:bg-gray-200 transition">
+        <img src="/pics/logo/menu.png" alt="Menu" class="w-5 h-5">
+    </button>
+    </div>
+
+    </nav>
+
+
+    <!-- Search bar -->
+    <div class="max-w-4xl mx-auto mt-8 px-4">
+    <div class="bg-white rounded-full shadow-md flex items-center justify-between ">
+        
+        <!-- Where -->
+        <div class="flex-1 px-4 py-2 rounded-full hover:bg-gray-200 cursor-pointer transition">
+            <p class="text-sm">Where</p>
+        <input type="text" placeholder="Search destination" class="w-full bg-transparent outline-none text-lg">
+        </div>
+
+        <!-- Check in -->
+        <div class="flex-1 px-4 py-2 rounded-full hover:bg-gray-200 cursor-pointer transition">
+            <p class="text-sm">Check in</p>
+        <input type="text" placeholder="Add dates" class="w-full bg-transparent outline-none text-lg">
+        </div>
+
+        <!-- Check out -->
+        <div class="flex-1 px-4 py-2 rounded-full hover:bg-gray-200 cursor-pointer transition">
+            <p class="text-sm">Check out</p>
+        <input type="text" placeholder="Add dates" class="w-full bg-transparent outline-none text-lg">
+        </div>
+
+        <!-- Who -->
+        <div class="flex-1 px-4 py-2 rounded-full hover:bg-gray-200 cursor-pointer transition">
+            <p class="text-sm">Who</p>
+        <input type="text" placeholder="Add guests" class="w-full bg-transparent outline-none text-lg">
+        </div>
+
+        <!-- Search Button -->
+        <button class="bg-red-400 rounded-full p-2 ml-2 hover:bg-red-600 transition flex items-center justify-center">
+            <img src="/pics/logo/search.png" alt="Search" class="w-5 h-5">
+        </button>
+    </div>
+    </div>
+
+
+  <!-- Popular Homes Section -->
+  <div class="max-w-7xl mx-auto mt-12 px-4">
+    <h2 class="text-2xl font-bold mb-6">Popular homes in Kuala Lumpur</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/property-1.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/property-2.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/property-3.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/property-4.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!--Available next month in Bangkok-->
+  <div class="max-w-7xl mx-auto mt-12 px-4">
+    <h2 class="text-2xl font-bold mb-6">Available next month in Bangkok</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/apt-1.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/apt-2.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/apt-3.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/apt-4.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!--Stay in London-->
+  <div class="max-w-7xl mx-auto mt-12 px-4">
+    <h2 class="text-2xl font-bold mb-6">Stay in London</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/property-1.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/property-3.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/property-4.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/property-2.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!--Available next month in Seoul-->
+  <div class="max-w-7xl mx-auto mt-12 px-4">
+    <h2 class="text-2xl font-bold mb-6">Available next month in Seoul</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- Card -->
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/apt-2.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/apt-4.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/apt-1.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+
+      <!-- Card -->
+        <div class="relative bg-white shadow rounded-xl overflow-hidden group">
+            <!-- Love Button -->
+            <button 
+                onclick="toggleLove(this)" 
+                class="absolute top-2 right-2 bg-white rounded-full p-2 shadow hover:scale-110 transition hidden group-hover:block"
+            >
+                <img src="/pics/logo/heart-outline.png" alt="Love" class="w-5 h-5 love-icon">
+            </button>
+
+            <!-- Card Image -->
+            <img src="/pics/property/apt-3.jpg" class="h-40 w-full object-cover">
+
+            <!-- Card Content -->
+            <div class="p-3">
+                <span class="text-sm bg-gray-100 px-2 py-1 rounded-full">Guest favorite</span>
+                <h3 class="mt-2 font-semibold">Place to stay in Cheras</h3>
+                <p class="text-gray-600 text-sm">$43 for 2 nights • ⭐ 4.92</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 mt-12 pt-10 pb-6 text-gray-700 text-sm">
+
+    <!-- Top Columns -->
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+        <!-- Support -->
+        <div>
+        <h3 class="font-semibold mb-3">Support</h3>
+        <ul class="space-y-2">
+            <li>Help Center</li>
+            <li>Get help with a safety issue</li>
+            <li>AirCover</li>
+            <li>Anti-discrimination</li>
+            <li>Disability support</li>
+            <li>Cancellation options</li>
+            <li>Report neighborhood concern</li>
+        </ul>
+        </div>
+
+        <!-- Hosting -->
+        <div>
+        <h3 class="font-semibold mb-3">Hosting</h3>
+        <ul class="space-y-2">
+            <li>Airbnb your home</li>
+            <li>Airbnb your experience</li>
+            <li>Airbnb your service</li>
+            <li>AirCover for Hosts</li>
+            <li>Hosting resources</li>
+            <li>Community forum</li>
+            <li>Hosting responsibly</li>
+            <li>Airbnb-friendly apartments</li>
+            <li>Join a free Hosting class</li>
+            <li>Find a co-host</li>
+        </ul>
+        </div>
+
+        <!-- Airbnb -->
+        <div>
+        <h3 class="font-semibold mb-3">Airbnb</h3>
+        <ul class="space-y-2">
+            <li>2025 Summer Release</li>
+            <li>Newsroom</li>
+            <li>Careers</li>
+            <li>Investors</li>
+            <li>Gift cards</li>
+            <li>Airbnb.org emergency stays</li>
+        </ul>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-6 border-gray-300">
+
+    <!-- Bottom Footer -->
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
+        
+        <!-- Left Text -->
+        <div class="mb-4 md:mb-0">
+        © 2025 Airbnb, Inc. · <a href="#" class="hover:underline">Terms</a> 
+        <a href="#" class="hover:underline ml-2">Sitemap</a> 
+        <a href="#" class="hover:underline ml-2">Privacy</a> 
+        <a href="#" class="hover:underline ml-2">Your Privacy Choices</a>
+        </div>
+
+        <!-- Right Section (Language + Currency) -->
+        <div class="flex items-center space-x-6 text font-bold">
+            <div class="flex items-center space-x-1 cursor-pointer hover:underline">
+                <img src="/pics/logo/global.png" alt="Language" class="w-4 h-4">
+                <span>English (US)</span>
+            </div>
+            <div class="flex items-center space-x-1 cursor-pointer hover:underline">
+                <span>$</span>
+                <span>USD</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" target="_blank">
+                <img src="/pics/logo/fb.jpg" alt="Facebook" class="w-4 h-4 hover:opacity-70">
+                </a>
+                <a href="#" target="_blank">
+                <img src="/pics/logo/x.png" alt="X" class="w-4 h-4 hover:opacity-70">
+                </a>
+                <a href="#" target="_blank">
+                <img src="/pics/logo/instragram.png" alt="Instagram" class="w-5 h-5 hover:opacity-70">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </footer>
+
+
+</body>
+</html>
