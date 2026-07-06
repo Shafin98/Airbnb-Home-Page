@@ -8,7 +8,7 @@ A pixel-inspired clone of the Airbnb home page, built with plain HTML, CSS, and 
 
 This project is a frontend-only clone of the Airbnb home page. The goal was to practice building a clean, responsive UI using plain HTML and Tailwind CSS, closely matching Airbnb's real-world design patterns such as navigation bar, search bar, category filters, and property listing cards.
 
-There is no backend, authentication, database, or JavaScript framework involved. Tailwind is loaded directly via CDN, so there's no build step required — open the HTML file, and it works.
+There is no backend, authentication, database, or JavaScript framework involved. Tailwind is loaded directly via CDN, so there's no build step required; just open the HTML file, and it works.
 
 ---
 
@@ -60,9 +60,15 @@ Simply open index.html directly in your browser, or use a live server for auto-r
 
 ### 🏠 Home Page
 Home Page Screenshot
+<p align="center">
+  <img src="./pics/ss/web.png" alt="Web Page Screenshot" width="700"/>
+</p>
 
 ### 📱 Responsive View
 Mobile View Screenshot
+<p align="center">
+  <img src="./pics/ss/mobile.png" alt="Login Page Screenshot" width="400"/>
+</p>
 
 ---
 
