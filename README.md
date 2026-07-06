@@ -68,6 +68,6 @@ Mobile View Screenshot
 
 ## 📝 Notes
 
-- This project was built purely for frontend practice — replicating a real, well-known UI (Airbnb) to sharpen skills in HTML structure and Tailwind CSS layout/responsiveness.
+- This project was built purely for frontend practice,  replicating a real, well-known UI (Airbnb) to sharpen skills in HTML structure and Tailwind CSS layout/responsiveness.
 - No API calls, authentication, backend logic, or JavaScript framework are included in this repo.
 - Tailwind is included via a CDN script tag, so there's no configuration file or build process to manage.
